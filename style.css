@@ -1,0 +1,515 @@
+body {
+    align-items: center;
+    margin: 24px;
+    padding: 16px;
+    font-family: "Gill Sans", sans-serif;    
+    background: #eefff7;
+    font-size: 16px;
+}
+
+
+.nav-icon {
+    width: 30px; 
+    height: 30px;
+    margin-right: 8px; 
+    vertical-align: middle; 
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #74a07e;
+}
+
+nav ul li {
+    list-style: none;
+    margin-top: 10%; 
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    padding: 25px 0 25px 38px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 100%;
+    border-radius: 40px 0px 0px 40px;
+    z-index: -1;
+    transition: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: transparent;
+    transform: translateY(-5px);
+    text-shadow:rgba(27, 25, 25, 0.778)
+
+  
+}
+
+nav ul li a:hover:before {
+    width: 95%;
+}
+
+.wrapper {
+    margin-left: 260px;
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.box-area h2 {
+    font-size: 100px;
+}
+
+.box-area p {
+    line-height: 2;
+}
+
+.box-area {
+    width: 75%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.form-container {
+    width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+.form-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #192c1c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.studentTable {
+    border-collapse: collapse;
+    margin: auto auto;
+    font-size: 0.9em;
+    width: 80%px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    align-items: center;
+}
+
+.studentTable thead tr {
+    background-color: #4e716a;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.studentTable th,
+.studentTable td {
+    padding: 10px 12px;
+}
+
+.studentTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.studentTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+.lectureTable {
+    border-collapse: collapse;
+    margin: auto auto;
+    font-size: 0.9em;
+    width: 800px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    text-align: center;
+}
+
+.lectureTable thead tr {
+    background-color: #4e716a;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.lectureTable th,
+.lectureTable td {
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.lectureTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+    margin: 8px;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+
+#searchStudent,
+#searchLecture {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #ccccccfa;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#gradeScale {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #ccccccfa;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+#studentHomeWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#failedStudentHome {
+    flex: 1;
+    background-color: #c4f9d7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: none;
+    margin: 5px;
+}
+
+#succededStudentHome {
+    width: 250px;
+    flex: 1;
+    background-color: #c4f9d7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#studentGpaContainer {
+    flex: 1;
+    background-color: #c4f9d7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+
+#studentGpaContainer select,
+#succededStudentHome select,
+#failedStudentHome select {
+    width: 250px;
+    text-align: center;
+}
+
+.lectureTable .update-button,
+.studentTable .update-button {
+    background-color: #4c594d;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+
+.lectureTable .delete-button,
+.studentTable .delete-button {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.updateStudentContainer,
+.updateLectureContainer {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.updateStudentContainer h2,
+.updateLectureContainer h2 {
+    color: #352f2f;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.updateStudentContainer label,
+.updateLectureContainer label {
+    display: block;
+    margin: 10px 0;
+    color: #393737;
+}
+
+.updateStudentContainer input,
+.updateLectureContainer input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.updateStudentContainer button#confirmButton,
+.updateLectureContainer button#confirmButton {
+    background-color: #2b2626;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.updateLectureContainer,
+.updateStudentContainer {
+    position: relative;
+    background-color: rgb(82, 82, 82);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.updateLectureContainer {
+    height: 400px;
+    width: 380px;
+}
+
+.updateStudentContainer {
+    height: 500px;
+    width: 420px;
+}
+
+
+.updateLectureContainer::after,
+.updateStudentContainer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+}
+
+.updateLectureContainer::after {
+    height: 400px;
+    width: 380px;
+}
+
+.updateStudentContainer::after {
+    height: 500px;
+    width: 420px;
+}
+
+.updateLectureContainer form,
+.updateStudentContainer form {
+    position: absolute;
+    inset: 2px;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 2px;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.welcome-container {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #bbccc2;
+    padding: 20px;
+}
+
+
+.welcome-heading {
+    color: #2b2626;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.feature-highlights {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.feature-highlights h3 {
+    color: #2b2626;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.feature:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.feature i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.feature h3 {
+    color: #2b2626;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #555;
+}
+
+.feature i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
